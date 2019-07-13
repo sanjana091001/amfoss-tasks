@@ -1,0 +1,19 @@
+#include<iostream> #comparing the triplets pgm
+int main()
+{
+    int a[4],b[4],counta=0,countb=0;
+    std::cout<<"  Enter marks of Alice  ";
+    std::cin>>a[0]>>a[1]>>a[2];  #inputting scores of Alice
+    std::cout<<"  Enter marks of Bob  ";
+    std::cin>>b[0]>>b[1]>>b[2];  #inputting scores of Bob
+    for(int i=0;i<3;i++)
+    {
+        if(a[i]>b[i])
+        counta++;
+        else if(a[i]<b[i])
+        countb++;
+    }
+    std::cout<<"  Score of Alice and Bob are  ";
+    std::cout<<counta<<" "<<countb;
+    return 0;
+}

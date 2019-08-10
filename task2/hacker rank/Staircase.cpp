@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     int i,j,n;
-    cout<<"enter the number of rows/columns in your matrix  ";
+    cout<<"enter the number of rows/columns in your matrix  "; //accepting values of rows/columns
     cin>>n;
     for(i=0;i<n+1;i++) 
     {

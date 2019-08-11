@@ -31,4 +31,4 @@ The language used was Rust.
 Task-14 was an additional task and that was to reach till level 10 in Bandit.
 Bandit: http://overthewire.org/wargames/bandit/
 I have provided all the passwords I found out till Level-10. 
-(I could do only till Lev-13)
+(I could do only till Lev-12)

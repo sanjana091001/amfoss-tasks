@@ -7,3 +7,8 @@
 | 14 | Bandit | Task-14 was an additional task and that was to reach till level 10 in Bandit. Bandit: http://overthewire.org/wargames/bandit/ I have provided all the passwords I found out till Level-10. (I could do only till Lev-12) | 
 
 
+A little bit about myself:
+
+I am Sanjana and I come from Ernakulam, Kerala. I joined Amrita because I've heard very positive responses from seniors and other alumni members. Also, I've heard that the mentorship and guidance offered by FOSS@amrita is one of a kind and I really wish to be a part of it.
+
+

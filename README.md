@@ -5,11 +5,12 @@
 | 2 | Programming | Task-2 was Programming. We had to solve ten coding problems from HackerRank and Codeforces using a language of our choice. My choice of language was C++. I have briefed how I did them by including comments in the respective code.|
 | 7 | Rusted Email | Task-7 was Rusted Email. An email was to be accepted from the user and my code was to tell if the email accepted was in the correct format or not. An external crate RegEx had to be used to compare the expressions. The language used was Rust. |
 | 8 | Captcha Breaking | Task-8 was captcha breaking using Python. To do this task, a special module for image processing (tesseract: https://pypi.org/project/pytesseract/) had to be installed. I also used eval() function to evaluate strings to integers. |
+| 9 | Personal Website | Task-9 was to create a simple website using Jekyll theme. Link: http://sanjana091001.github.io |
 | 14 | Bandit | Task-14 was an additional task and that was to reach till level 10 in Bandit. Bandit: http://overthewire.org/wargames/bandit/ I have provided all the passwords I found out till Level-10. (I could do only till Lev-12) | 
 
 
 A little bit about myself:
 
-I am Sanjana and I come from Ernakulam, Kerala. I joined Amrita because I've heard very positive responses from seniors and other alumni members. Also, I've heard that the mentorship and guidance offered by FOSS@amrita is one of a kind and I really wish to be a part of it.
+I am Sanjana and I'm from Kerala. I joined Amrita because I've heard very positive responses from seniors and other alumni members. Also, I've heard that the mentorship and guidance offered by FOSS@amrita is one of a kind and I really wish to be a part of it.
 
 

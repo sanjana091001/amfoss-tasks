@@ -1,0 +1,9 @@
+query {
+  repositoryOwner(login:"username"){
+ avatarUrl
+ id
+ login
+ }
+ }
+
+

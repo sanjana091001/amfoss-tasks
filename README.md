@@ -8,6 +8,7 @@
 | 8 | Captcha Breaking | Task-8 was captcha breaking using Python. To do this task, a special module for image processing (tesseract: https://pypi.org/project/pytesseract/) had to be installed. I also used eval() function to evaluate strings to integers. |
 | 9 | Personal Website | Task-9 was to create a simple website using Jekyll theme. Link: http://sanjana091001.github.io |
 | 10 | CS50 | Task-10 was to watch all CS50(Introduction to Computer Science by Harvard University) lectures till week-4 and complete psets for the same. It includes lectures on Scratch, C language, Arrays, Algorithms and memory |
+| 11 | Pong Game | The task was to clone the classic pong game in Javascript. Moreover, it had to be multiplayer. I used canvas for creating the graphics and other functions like addEventListener(). |
 | 12 | Python Source | The task was to run the given script in which we had to input a particular string which on being correct displays "Yeah..you're a genius" . Reversing the functions had to be done in order to obtain the correct string |
 | 14 | Bandit | Task-14 was an additional task and that was to reach till level 10 in Bandit. Bandit: http://overthewire.org/wargames/bandit/ I have provided all the passwords I found out till Level-10. | 
 

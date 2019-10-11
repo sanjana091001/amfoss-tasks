@@ -1,0 +1,160 @@
+<html>
+<canvas id="gc" width="1300" height="620"> </canvas>
+<script>
+//paddle position
+var paddle1_y = 40;
+var paddle2_y = 40;
+
+//paddle size
+var paddle_thickness = 20;
+var paddle_height = 150;
+
+//ball position
+var ball_x = 50;
+var ball_y = 50;
+
+//ball size
+var ball_dimension = 12;
+
+//speed variables
+var x_velocity = 5;
+var y_velocity = 5;
+
+//player scores
+var player1_score = 0;
+var player2_score = 0;
+
+// winning score
+var winning_score = 5;
+var reset_game = false;
+
+window.onload = function ()  {
+		// loading the canvas
+		var canvas = document.getElementById('gc');
+		var context = canvas.getContext('2d');
+	
+		// fps=30
+		var run_game = setInterval(run,  1000/60);
+	
+document.addEventListener('keydown', function (e) {
+     if (e.keyCode == 87 || e.which == 87) { // W key moves left paddle up
+      paddle1_y -= 30;
+     }
+     if (e.keyCode == 83 || e.which == 83) { // S Key moves left paddle down
+      paddle1_y += 30;
+     }
+     if (e.keyCode == 38 || e.which == 38) { // up arrow moves right paddle up
+      paddle2_y -= 30;
+     }
+     if (e.keyCode == 40 || e.which == 40) { // down arrow moves right paddle down
+      paddle2_y += 30;
+     }
+}, false);
+
+
+		function reset_ball() {
+				// Reset the ball's pos.
+				ball_x = canvas.width / 2;
+				ball_y = canvas.height/ 2;
+				x_velocity = -x_velocity;
+				y_velocity = 10;
+		}
+	
+		function move_ball(){
+				// moving ball
+				ball_x += x_velocity;
+				ball_y += y_velocity;
+		}
+
+	
+		function bounce_off(){
+			// Bounce the ball off the top of the screen
+				if (ball_y < 0 && y_velocity < 0){
+						y_velocity = -y_velocity;
+				}
+
+				// Bounce the ball off the bottom of the screen
+				if (ball_y > canvas.height && y_velocity > 0){
+						y_velocity = -y_velocity;
+				}
+
+				// Bounce the ball off the left side
+				if (ball_x < 0){
+						if (ball_y > paddle1_y && ball_y < paddle1_y + paddle_height) {
+								x_velocity =- x_velocity;
+								delta_y = ball_y - (paddle1_y + paddle_height/2);
+								y_velocity = delta_y * 0.3;
+						} else {
+								player2_score++;
+								reset_ball();
+						}
+				}
+
+				// Bounce the ball off the right side
+				if (ball_x > canvas.width){
+						if (ball_y > paddle2_y && ball_y < paddle2_y + paddle_height) {
+								x_velocity =- x_velocity;
+								delta_y = ball_y - (paddle2_y + paddle_height/2);
+								y_velocity = delta_y * 0.3;
+						} else {
+								player1_score++;
+								reset_ball();
+						}
+				}
+		}                                                                   
+	
+		function setup_canvas() {
+
+				context.fillStyle = 'white';
+				context.fillRect(0, 0, canvas.width, canvas.height);
+
+				context.fillStyle = 'black';
+
+				context.fillRect(0, paddle1_y, paddle_thickness, paddle_height);
+
+				context.fillRect(canvas.width-paddle_thickness, paddle2_y, paddle_thickness, paddle_height);
+
+				context.fillRect(ball_x-ball_dimension/2, ball_y-ball_dimension/2, ball_dimension, ball_dimension);
+
+				context.fillRect(90, canvas.height - 95, 40, 40);
+				context.fillRect(canvas.width - 110, 65, 40, 40);
+	
+				context.font = "18px serif";
+				context.fillText("Player1 Score", 70, canvas.height - 40);
+				context.fillText("Player2 score", canvas.width - 120, 60);
+				context.fillStyle = 'white';
+				context.font = "48px serif";
+				context.fillText(player1_score, 100, canvas.height - 60);
+				context.fillText(player2_score, canvas.width - 100, 100);
+		}
+	
+		function did_player_win(){
+			if(player1_score === winning_score || player2_score === winning_score){
+				// set variable to reset game
+				reset_game = true;
+				// stop the game from running
+				clearTimeout(run_game);
+				context.fillStyle = 'black';
+				context.font = "48px serif";
+				context.fillText("End of Game", canvas.width/2 - canvas.width/6, canvas.height/2);
+				if (player1_score === winning_score){
+					context.font = "40px serif";
+					context.fillText("Player1 won!", canvas.width/2 - canvas.width/14, canvas.height/2 + 25);
+				} 
+				if (player2_score === winning_score){
+					context.font = "40px serif";
+					context.fillText("Player2 won!", canvas.width/2 - canvas.width/14, canvas.height/2 + 25);
+				}
+			}
+		}
+	
+
+function run(){
+        move_ball();
+        bounce_off();
+        setup_canvas();
+        did_player_win();
+    }
+}
+</script>
+</html>

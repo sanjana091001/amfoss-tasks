@@ -1,13 +1,13 @@
 package main
 
 import (
-    "bufio"
+          "bufio" //for input
 	  "flag"  //for using flag
 	  "fmt"  //input output
 	  "log"  //for logging errors etc
 	  "os"   //file handling
 	  "strconv"  //to convert strings
-    "github.com/dghubble/go-twitter/twitter"
+           "github.com/dghubble/go-twitter/twitter"
 	  "github.com/dghubble/oauth1"
 )
 
